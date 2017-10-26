@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Forward Attention Audio Samples</title>
+</head>
+
+<body style="text-align: left;">
+<h2 style="text-align: left">Audio Samples from &quot;FORWARD ATTENTION IN SEQUENCE-TO-SEQUENCE ACOUSTIC MODELING FOR SPEECH SYNTHESIS&quot;</h2>
+<p style="text-align: left;"><strong>Authors:</strong> Jing-Xuan Zhang, Zhen-Hua Ling, Li-Rong Dai</p>
+<p><strong>Abstract: </strong>This paper proposes a forward attention method for the sequenceto- sequence acoustic modeling of speech synthesis. This method is motivated by the nature of monotonic alignment from phone sequences to acoustic sequences. Only the alignment paths that satisfy the monotonic condition are taken into consideration at each decoder timesteps. The modified attention probabilities at each timestep are computed recursively using a forward algorithm. A transition agent for forward attention is further proposed, which helps the attention mechanism to make decisions whether to move forward or stay at each timestep. Experimental results show that the proposed forward attention method achieves faster convergence speed and higher stability than the baseline attention method. Besides, the method of forward attention with transition agent can also help improve the naturalness of synthetic speech and control the speed of synthetic speech effectively.</p>
+<hr>
+<p>&nbsp;</p>
+<ul>
+  <li>
+    <h3>Stability Demo</h3>
+  </li>
+</ul>
+<table width="81%" border="1">
+  <tbody>
+    <tr>
+      <th width="22%" style="text-align: center" scope="col">Model</th>
+      <th width="26%" style="text-align: center" scope="col">Plain</th>
+      <th width="26%" style="text-align: center" scope="col">Window</th>
+      <th width="26%" style="text-align: center" scope="col">Conv. Feats.</th>
+    </tr>
+    <tr>
+      <th width="22%" rowspan="2" style="text-align: center" scope="row">Baseline</th>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline_win/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline_conv/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline_win/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/baseline_conv/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="22%" rowspan="2" style="text-align: center" scope="row">FA</th>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward_win/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward_conv/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward_win/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forward_conv/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="22%" rowspan="2" style="text-align: center" scope="row">FA-TA</th>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA_win/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA_win/00005257_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA_win/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="robustness/forwardTA_win/00000506_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>
+    <h3>Naturalness Demo</h3>
+  </li>
+</ul>
+<table width="60%" border="1">
+  <tbody>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="col"> Model</th>
+      <th colspan="2" style="text-align: center" scope="col">Audio Samples</th>
+    </tr>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="col">FA</th>
+      <th width="35%" style="text-align: center" scope="col"><audio controls>
+        <source src="naturalness/forward/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <th width="35%" style="text-align: center" scope="col"><audio controls>
+        <source src="naturalness/forward/00013358_gen.wav" type="audio/wav">
+      </audio></th>
+    </tr>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="row">FA-TA</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/forwardTA/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/forwardTA/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="row">FA-TA*</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/forwardTA_conv/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/forwardTA_conv/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="row">Baseline</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/baseline/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/baseline/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="30%" align="right" style="text-align: center" scope="row">LSTM</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/lstm/B_3.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="naturalness/lstm/B_19.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+  </tbody>
+</table>
+<ul>
+  <li>
+    <h3>Speed Control Demo</h3>
+  </li>
+</ul>
+<span style="text-align: center" width="170" nowrap="nowrap" scope="col"></span><span style="text-align: center" width="170" nowrap="nowrap" scope="col"></span>
+<table width="60%" border="1">
+  <tbody>
+    <tr>
+      <th width="30%" nowrap style="text-align: center" scope="col">Added Bias Value</th>
+      <th colspan="2" style="text-align: center; width: 80%;" scope="col">Audio Samples</th>
+    </tr>
+    <tr>
+      <th width="20%" nowrap style="text-align: center" scope="row">-1.2</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s_12/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s_12/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="20%" nowrap style="text-align: center" scope="row">-0.6</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s_6/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s_6/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="20%" nowrap style="text-align: center" scope="row">0.0</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s0/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s0/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="20%" nowrap style="text-align: center" scope="row">0.6</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s6/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s6/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+    <tr>
+      <th width="20%" nowrap style="text-align: center" scope="row">1.2</th>
+      <th width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s12/00000440_gen.wav" type="audio/wav">
+      </audio></th>
+      <td width="35%" style="text-align: center"><audio controls>
+        <source src="speedcontrol/s12/00013358_gen.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
